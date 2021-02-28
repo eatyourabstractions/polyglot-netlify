@@ -72,7 +72,7 @@ const ProgressProvider = ({ valueStart, valueEnd, children }) => {
   
     return children(value);
   };
-  // HACKING: FIGURING OUT HOW TO UPDATE THE PROGRESS IN FIREBASE
+
   const SingleLesson = ({levelState, numOfTest, level}) =>{
     let history = useHistory();
     let dispatch = useDispatch()

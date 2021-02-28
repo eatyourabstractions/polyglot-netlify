@@ -1,29 +1,29 @@
 
-import React,{useEffect, useState} from 'react';
+import React,{useEffect} from 'react';
 import './App.css';
 
 import { BrowserRouter as Router, Route, useHistory} from "react-router-dom";
 
 import Dashboard from './components/Dashboard'
 
-import styled from 'styled-components'
+
 
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 
 
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import {useSessionListener} from './hooks/useSessionListener-hook';
 
-import {logout} from './redux/actions'
+
 
 
 
 
 function App() {
     useSessionListener();
-    const dispatch = useDispatch()
+
     
   
   return (
@@ -44,19 +44,6 @@ function App() {
 
 }
 
-const Logout = styled.button`
-  position: relative;
-  display: block;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background:#65e603;
-  color: whitesmoke;
-  font-size:25px;
-  border: none;
-  left: 20px;
-  top: 10px;
-`;
 
 
 

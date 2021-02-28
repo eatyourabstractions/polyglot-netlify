@@ -127,12 +127,16 @@ const myReducer =  (state = initialState, action) =>{
       
       case "UPDATE_LEVEL_PROGRESS":
         console.log(`update level ${action.level} progress by ${state[action.level].progressStep}`)
+       let newProgressCandidat = state[action.level].progress + state[action.level].progressStep
+       if(state[action.level].progress === 100) {
+         newProgressCandidat = 100
+       }
        
       return {
         ...state,
         [action.level]:{
           ...state[action.level],
-          progress: state[action.level].progress + state[action.level].progressStep
+          progress: newProgressCandidat
         },
         lastUpdatedLevel: action.level
       };
